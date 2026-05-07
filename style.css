@@ -1,0 +1,755 @@
+/* --- RESET E VARIÁVEIS --- */
+:root {
+    --primary: #f59e0b;
+    --dark-bg: #0a0806;       /* Marrom quase preto da referência */
+    --nav-bg: #352a22;        /* Marrom chocolate escuro */
+    --card-bg: #1a1512;       /* Fundo dos cards igual à referência */
+    --border-soft: rgba(245, 158, 11, 0.08);  
+}
+
+.container{
+   width: 100%;
+   max-width: 1200px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif; /* Fonte para títulos */
+
+}
+
+
+
+body {
+    background-color: var(--dark-bg);
+    color: white;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- NAVBAR SUPERIOR --- */
+#nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    padding: 0 5%;
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: linear-gradient(150deg, rgb(110, 68, 17), rgb(0, 0, 0));
+}
+
+.brand-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#logoup {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--primary);
+    animation: glowPulse 2s infinite ease-in-out;
+}
+
+.title {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.title span {
+    color: white;
+    font-weight: normal;
+}
+nav a{
+    font-size: 0.90rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sub-details {
+    display: flex;
+    gap: 10px;
+    font-size: 0.65rem;
+    color: #888;
+}
+
+.status-badge {
+    background-color: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #4ade80;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 1.20rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.two span{
+    color: var(--primary);
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #22c55e;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 106vh;
+    background: url('img/fundo.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(150deg, rgb(110, 68, 17), rgb(55, 42, 6));
+}
+.hero::before {
+    background: radial-gradient(circle, rgba(10, 8, 6, 0.1) 0%, var(--dark-bg) 90%);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/fundo2.png') center/cover no-repeat;
+    transform: scale(1.1); /* Tira as bordas brancas */
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+background: radial-gradient(circle, rgba(10, 8, 6, 0.2) 0%, #0a0806 100%);    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#logoCenter {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(245, 158, 11, 0.4);
+    margin-bottom: 25px;
+    animation: glowPulse 2s infinite ease-in-out;
+}
+
+.badge {
+    border: 1px solid var(--primary);
+    padding: 5px 15px;
+    border-radius: 50px;
+    color: var(--primary);
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+#titulo {
+    font-size: 6rem;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--primary);
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.description {
+    max-width: 800px;
+    color: #bbb;
+    margin-bottom: 30px;
+    font-size: 1.20rem;
+}
+
+.btn-main {
+    background: var(--primary);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    transition: 0.3s;
+}
+
+/* --- CATEGORIAS --- */
+.category-container {
+    display: flex;
+justify-content: center;
+    gap: 12px;
+    padding: 40px 5%;
+    overflow-x: auto;
+}
+
+.category-btn {
+    background: var(--card-bg);
+    color: var(--primary);
+    border: 1px solid #333;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.category-btn.active {
+    background: var(--primary);
+    color: black;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+/* --- ANIMAÇÕES --- */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 35px rgba(245, 158, 11, 0.7);
+        transform: scale(1.03);
+    }
+}
+
+/* Estilos extras para manter os cards alinhados */
+.two { text-align: center;
+    padding: 50px 20px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(150deg, rgba(29, 16, 0, 0.642), rgb(0, 0, 0));
+}
+
+.two p {
+    text-align: center;
+    font-size: 1.80rem;
+}
+h2{
+    font-size: 3rem;
+}
+
+.card h2{ font-size: 25px;
+}
+ #carda{
+    color: var(--primary);
+    font-size: 4rem;
+ }
+
+.cards-container { display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px; }
+.card { background: var(--card-bg); 
+    color: var(--primary);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #333; }
+.comentary { padding: 40px 5%; background: #111; margin-top: 20px; text-align: center;}
+
+.category-btn:hover {
+    background-color: var(--primary); /* Muda para laranja ao passar o mouse */
+    color: black; /* Texto fica preto para contraste */
+    transform: translateY(-5px); /* O botão sobe 5px */
+    box-shadow: 0 5px 15px rgba(245, 158, 11, 0.4); /* Adiciona uma sombra brilhante */
+    transition: all 0.3s ease; /* Faz a mudança ser suave, não um tranco */
+}
+.btn-main:hover {
+    filter: brightness(1.2); /* Deixa o laranja mais "aceso" */
+    transform: scale(1.05); /* Aumenta o tamanho em 5% */
+    cursor: pointer; /* Garante que a "mãozinha" apareça */
+}
+.card:hover {
+    border-color: var(--primary); /* A borda fica laranja */
+    background-color: rgba(245, 158, 11, 0.05); /* Um fundo laranjinha bem discreto */
+    transition: 0.3s;
+}
+.three{
+        background: linear-gradient(150deg, rgb(29, 16, 0), rgb(29, 16, 0));
+
+}
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 40px 5%;
+    overflow-x: auto;
+}
+
+.category-btn {
+    background: var(--card-bg);
+    color: var(--primary);
+    border: 1px solid #333;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.category-btn.active {
+    background: var(--primary);
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* --- GRID DE PRODUTOS --- */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 25px 5%;
+}
+
+.product-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.product-img {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.price-tag {
+    background: var(--primary);
+    color: black;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* --- ANIMAÇÕES E INTERAÇÕES --- */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 35px rgba(245, 158, 11, 0.7);
+        transform: scale(1.03);
+    }
+}
+
+.category-btn:hover, .card:hover, .product-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 5px 15px rgba(245, 158, 11, 0.2);
+}
+
+.btn-main:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+.comentary {
+    padding: 40px 5%;
+    background: #111;
+    text-align: center;
+}
+
+/* --- INFORMAÇÕES DE ENTREGA --- */
+.delivery-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 5%;
+    background: var(--dark-bg);
+}
+
+.info-box {
+    background: var(--card-bg);
+    padding: 20px 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #222;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    background: rgba(245, 158, 11, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+/* --- DEPOIMENTOS --- */
+.testimonials {
+    padding: 80px 5%;
+    text-align: center;
+    background: var(--dark-bg);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    background: #111;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: left;
+    border: 1px solid #222;
+}
+
+.user-info { display: flex; gap: 15px; margin-bottom: 15px; }
+.user-avatar { 
+    width: 45px; height: 45px; background: #222; 
+    border-radius: 50%; display: flex; 
+    justify-content: center; align-items: center; 
+    color: var(--primary); font-weight: bold;
+}
+
+.stars { color: var(--primary); margin-bottom: 10px; }
+
+/* --- FOOTER --- */
+.main-footer {
+    padding: 80px 5% 20px;
+    background: #080705;
+    border-top: 1px solid #1a1a1a;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-brand img { width: 60px; border-radius: 50%; margin-bottom: 15px; }
+.footer-column h4 { color: var(--primary); margin-bottom: 20px; }
+.footer-column p, .footer-column a { color: #888; text-decoration: none; display: block; margin-bottom: 10px; font-size: 0.9rem; }
+
+.footer-bottom {
+    border-top: 1px solid #1a1a1a;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: #444;
+    font-size: 0.8rem;
+}
+.hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('img/fundo.jpg') center/cover no-repeat;
+}
+
+/* ============================= */
+/* CARROSSEL DE DEPOIMENTOS */
+/* ============================= */
+
+/* Container principal */
+.testimonial-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+}
+
+/* Linha que se move */
+.testimonial-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scrollX 18s linear infinite;
+    will-change: transform;
+}
+
+/* Cards (mantém seu estilo + ajuste) */
+.testimonial-card {
+    min-width: 300px;
+    max-width: 320px;
+    background: #111;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: left;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+/* Hover leve */
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 5px 15px rgba(245, 158, 11, 0.15);
+}
+
+/* Avatar */
+.user-avatar {
+    width: 45px;
+    height: 45px;
+    background: #222;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Estrelas */
+.stars {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* ANIMAÇÃO CONTÍNUA */
+@keyframes scrollX {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* PAUSA AO PASSAR O MOUSE */
+.testimonial-wrapper:hover .testimonial-track {
+    animation-play-state: paused;
+}
+
+/* ============================= */
+/* FADE NAS LATERAIS (PRO) */
+/* ============================= */
+
+.testimonial-wrapper::before,
+.testimonial-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Fade esquerdo */
+.testimonial-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #0a0806, transparent);
+}
+
+/* Fade direito */
+.testimonial-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #0a0806, transparent);
+}
+
+/* ============================= */
+/* RESPONSIVO */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        min-width: 260px;
+    }
+    }
+
+.testimonial-track {
+    animation: scrollX 28s linear infinite;
+    will-change: transform;
+}
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
+.testimonial-track,
+.hero-bg {
+    will-change: transform;
+}
+
+/* ========================= */
+/* RESPONSIVIDADE MOBILE */
+/* ========================= */
+
+@media (max-width: 768px){
+
+    /* NAVBAR */
+
+    #nav-menu{
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .brand-group{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .sub-details{
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .status-badge{
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+
+    /* HERO */
+
+    .hero{
+        height: auto;
+        min-height: 100vh;
+        padding-top: 140px;
+    }
+
+    #logoCenter{
+        width: 110px;
+    }
+
+    #titulo{
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+
+    .description{
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .btn-main{
+        font-size: 1.1rem;
+        padding: 12px 25px;
+    }
+
+    /* SECTION 2 */
+
+    #carda{
+        font-size: 2.5rem;
+    }
+
+    .two h2{
+        font-size: 2rem;
+    }
+
+    .two p{
+        font-size: 1rem;
+    }
+
+    .cards-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 100%;
+        max-width: 350px;
+        justify-content: center;
+    }
+
+    /* CATEGORIAS */
+
+    .category-container{
+        justify-content: flex-start;
+        padding: 20px;
+    }
+
+    .category-btn{
+        font-size: 0.9rem;
+        padding: 10px 16px;
+    }
+
+    .category-btn.active{
+        font-size: 1rem;
+    }
+
+    /* PRODUTOS */
+
+    .products-grid{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .product-img{
+        height: 200px;
+    }
+
+    /* TESTEMUNHOS */
+
+    .testimonials h2{
+        font-size: 2rem;
+    }
+
+    .testimonial-card{
+        min-width: 240px;
+    }
+
+    /* FOOTER */
+
+    .footer-container{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-bottom{
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+}
+.btn-main{
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+    z-index: 10;
+}
+.hero::before{
+    pointer-events: none;
+}

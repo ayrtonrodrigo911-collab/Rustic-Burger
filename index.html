@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>RUSTIC BURGER</title>
+</head>
+<body>
+    <div id="main">
+        <nav id="nav-menu">
+            <div class="brand-group">
+                <img id="logoup" src="img/logo.jpg" alt="Logo">
+                <div class="brand-text">
+                    <div class="title">Rustic <span>Burger</span></div>
+                    <div class="sub-details">
+                        <a href="#" id="emd"><span>📍 Toritama, PE</span></a>
+                        <a href="#"><span id="contact">📞 (81) 97323-0311</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="status-badge">
+                <span class="status-dot"></span> Aberto Agora
+            </div>
+        </nav>
+
+        <header class="hero">
+            <div class="hero-overlay">
+                <img id="logoCenter" src="img/logo.jpg" alt="Logo Central">
+                <span class="badge">🔥 Hamburguer Artesanal Premium</span>
+                <h1 id="titulo">Sabor que <br><span class="highlight">Incendeia</span></h1>
+                <p class="description">
+                    Blend exclusivo de carnes nobres, ingredientes frescos selecionados e receitas autorais que transformam cada mordida em uma experiência inesquecível.
+                </p>
+                    <button class="btn-main" id="btn-cardapio">
+                    Ver Cardápio ↓
+                    </button>
+                </div>
+        </header>
+
+        <div class="two" id="cardapio">
+            <p id="carda">Nosso Cardápio</p>
+            <h2>Escolha seu <span>Favorito</span></h2>
+            <p>Todos os nossos hambúrgueres são preparados na hora com ingredientes frescos e selecionados.</p>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-text"><h2>Fazemos Entregas 🛍️</h2></div>
+                </div>
+                <div class="card">
+                    <div class="card-text"><h2>Taxa de Entrega 💳</h2></div>
+                </div>
+                <div class="card">
+                    <div class="card-text"><h2>Entrega Rápida 🚖</h2></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="three">
+            <div class="category-container">
+                <button class="category-btn active" data-category="burgers"><span>🍔</span> Burgers</button>
+                <button class="category-btn" data-category="hot-dogs"><span>🌭</span> Hot Dogs</button>
+                <button class="category-btn" data-category="combos"><span>🎉</span> Combos</button>
+                <button class="category-btn" data-category="pratos"><span>🍽️</span> Pratos do Dia</button>
+            </div>
+        </div>
+
+        <div id="menu-products" class="products-grid">
+            </div>
+
+        <section class="testimonials">
+    <span class="section-tag">📝 DEPOIMENTOS</span>
+    <h2>O que nossos <span class="highlight">clientes</span> dizem</h2>
+    
+<div class="testimonial-wrapper">
+    <div class="testimonial-track">
+
+        <!-- Card original -->
+        <div class="testimonial-card">
+            <div class="user-info">
+                <div class="user-avatar">CS</div>
+                <div>
+                    <h4>Carlos Silva</h4>
+                    <span class="time">Há 2 dias</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"Melhor hambúrguer que já comi em Toritama! A carne é suculenta e os ingredientes são muito frescos."</p>
+        </div>
+        
+        <div class="testimonial-card">
+         <div class="user-info">
+                <div class="user-avatar">L</div>
+                <div>
+                    <h4>Leadro</h4>
+                    <span class="time">Há 1 dias</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"Melhor que eu ja come"
+        </div>
+
+        <div class="testimonial-card">
+         <div class="user-info">
+                <div class="user-avatar">C</div>
+                <div>
+                    <h4>Casca</h4>
+                    <span class="time">Há Hpje</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"Otimo sabor e entrega"
+        </div>
+
+        <div class="testimonial-card">
+         <div class="user-info">
+                <div class="user-avatar">R</div>
+                <div>
+                    <h4>Reimoso</h4>
+                    <span class="time">Há 9 dias</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"Sempre pesso com frequencia recomendo"
+        </div>
+        
+        <!-- DUPLICA (necessário pro loop infinito) -->
+        <div class="testimonial-card">
+            <div class="user-info">
+                <div class="user-avatar">CS</div>
+                <div>
+                    <h4>Carlos Silva</h4>
+                    <span class="time">Há 2 dias</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"Melhor hambúrguer que já comi em Toritama! A carne é suculenta e os ingredientes são muito frescos."</p>
+        </div>
+        <div class="testimonial-card">
+         <div class="user-info">
+                <div class="user-avatar">L</div>
+                <div>
+                    <h4>Leadro</h4>
+                    <span class="time">Há 1 dias</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"Melhor que eu ja come"
+        </div>
+                <div class="testimonial-card">
+         <div class="user-info">
+                <div class="user-avatar">C</div>
+                <div>
+                    <h4>Casca</h4>
+                    <span class="time">Há Hpje</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"Otimo sabor e entrega"
+        </div>
+
+        <div class="testimonial-card">
+         <div class="user-info">
+                <div class="user-avatar">R</div>
+                <div>
+                    <h4>Reimoso</h4>
+                    <span class="time">Há 9 dias</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"Sempre pesso com frequencia recomendo"
+        </div>
+
+    </div>
+</div>
+
+    <div class="rating-summary">
+        <div class="score">4.9 <span>★★★★★</span></div>
+        <p>Baseado em <strong>+500 avaliações</strong> de clientes satisfeitos</p>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <img src="img/logo.jpg" alt="Logo">
+            <h3>Rustic <span>Burger</span></h3>
+            <p>Hambúrguer Artesanal</p>
+            <div class="social-links">
+                <a href="#">📸</a> <a href="#">👤</a> <a href="#">💬</a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4>Contato</h4>
+            <p>📍 Av. Dorival Jose Pereira, 620<br>Toritama - PE</p>
+            <p>📞 (81) 97323-0311</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Horários</h4>
+            <ul>
+                <li>Seg - Ter: 16:00 – 22:30</li>
+                <li>Qua - Sáb: 10:30 – 22:30</li>
+                <li>Dom: 16:00 – 23:00</li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Links</h4>
+            <a href="#">Cardápio</a>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Avaliações</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Rustic Burger. Todos os direitos reservados.</p>
+        <p>Feito com <span class="highlight">paixão  ASS:</span>AYRTON RODRIGO</p>
+    </div>
+    
+</footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+</body>
+</html>

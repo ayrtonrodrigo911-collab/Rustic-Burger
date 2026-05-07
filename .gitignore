@@ -1,0 +1,18 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editor (VS Code)
+.vscode/
+
+# Logs
+*.log
+
+# Node (caso use futuramente)
+node_modules/
+npm-debug.log*
+
+# Cache
+.cache/
+dist/
+build/
