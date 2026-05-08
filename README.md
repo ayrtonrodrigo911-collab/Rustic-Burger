@@ -13,9 +13,6 @@ O projeto foi desenvolvido com foco em design atrativo, animações suaves e exp
 
 ## 📸 Preview
 
-*(adicione aqui um print do seu site depois)*  
-Ex:  
-`img/preview.png`
 
 ---
 
@@ -50,5 +47,4 @@ Ex:
 ---
 
 ## 📂 Estrutura do projeto
-# Rustic-Burger
 # Rustic-Burger
